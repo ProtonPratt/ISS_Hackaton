@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Search</title>
+  <script src="search.js"></script>
+  <!-- use the 'src' attribute, not '=' -->
+  <link rel="stylesheet" href="search.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="display_contact.css" />
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="ABOUT PAGE.html" class="linker">ABOUT</a>
+    <!-- <a href="search.html" class="linker">SEARCH</a> -->
+    <a href="VEIW PAGE.html" class="linker">VEIW PAGE</a>
+    <a href="Entry page.html" class="linker">ENTRY PAGE</a>
+    <a href="instruction.html" class="linker">INSTRUCTION PAGE</a>
+    <script>
+      const aTags = document.querySelectorAll(".linker");
+      aTags.forEach((link) => {
+        link.addEventListener("mouseover", () => {
+          link.style.color = "black";
+        });
+
+        link.addEventListener("mouseout", () => {
+          link.style.color = "white";
+        });
+      });
+    </script>
+    <!--<a href="#tools">Tools</a>
+		  <a href="#stringfunctions">String Functions</a>-->
+  </div>
+  <div class="container-slider">
+    <br /><br />
+    <form style="margin-left: 40%" id="search-form">
+      <label for="search">Search:</label>
+      <input type="text" id="search" name="search" placeholder="search contact" />
+      <button type="submit">Search</button>
+    </form>
+    <div style="margin-left: 44%" id="filter">
+      <!-- <button class="btn active" onclick="filterSelection('all')"> SHOW ALL</button> -->
+      <input type="checkbox" id="students" name="STUDENT" checked />STUDENT
+      <input type="checkbox" id="faculty" name="FACULTY" />FACULTY
+    </div>
+    <br /><br /><br />
+
+    <table style="color: black" id="faculty">
+      <tbody>
+        <tr class="hide" id="faculty">
+          <td>
+            <!-- <div class="image-wrapper">
+                <img src="random.jpg" />
+              </div> -->
+          </td>
+          <td>
+            <h3 class="name">
+              <a href="/people/faculty/Aakansha/">Aakansha Natani</a>
+            </h3>
+            <p>
+              Assistant Professor <br /><br />
+              Ph.D (Jawaharlal Nehru University, New Delhi)
+            </p>
+            <br /><br />
+            <p>
+              <strong>Research Areas:</strong>
+              <br /><br />Internet and Democracy, E-Governance, Data Ownership
+              and Privacy Debates, Online Civic Engagement and Political
+              Culture, Digital Divide
+            </p>
+            <p>
+              Research Center/Lab:
+              <a href="https://hsrg.iiit.ac.in/">HSRG</a>
+            </p>
+          </td>
+        </tr>
+        <tr class="show" id="students">
+
+          <td>
+            <h3 class="name">
+              Abhishek Deshpande
+            </h3>
+            <p>
+              Assistant Professor <br /><br />
+              Ph.D (Imperial College London)
+            </p>
+            <p>
+              <br /><br />
+              <strong>Research Areas:</strong>
+              <br />
+              <br />Dynamical systems, Mathematical Biology
+            </p>
+            <p>
+              Research Center/Lab:
+              <a href="http://ccnsb.iiit.ac.in/">CCNSB</a>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    const searchForm = document.querySelector("#search-form");
+    searchForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      searchTable();
+    });
+    function searchTable() {
+      const input = document.querySelector("#search");
+      const query = input.value.toLowerCase();
+      const rows = document.querySelectorAll("table>tbody>tr");
+
+      rows.forEach((row) => {
+        const name = row.querySelector(".name").textContent.toLowerCase();
+
+        if (name.includes(query)) {
+          row.classList.add("show");
+          row.classList.remove("hide");
+        } else {
+          row.classList.add("hide");
+          row.classList.remove("show");
+        }
+      });
+    }
+    const studentsCheckbox = document.querySelector("#students");
+    studentsCheckbox.addEventListener("change", (filterTable) => {
+      const rows = document.querySelectorAll("table>tbody>tr");
+
+      rows.forEach((row) => {
+        const category = row.getAttribute("id");
+        const checkbox = document.querySelector('#students');
+        const checkbox1 = document.querySelector('#faculty');
+        console.log(category);
+        if (checkbox.checked) {
+          if (category === "students") {
+            row.classList.add("show");
+            row.classList.remove("hide");
+            checkbox1.checked = false;
+          } else {
+            row.classList.add("hide");
+            row.classList.remove("show");
+          }
+        }
+      });
+    });
+
+    const facultyCheckbox = document.querySelector("#faculty");
+    facultyCheckbox.addEventListener("change", (filterTable) => {
+      const rows = document.querySelectorAll("table>tbody>tr");
+
+      rows.forEach((row) => {
+        const category = row.getAttribute("id");
+        const checkbox1 = document.querySelector('#students');
+        const checkbox = document.querySelector('#faculty');
+        console.log(category);
+        if (checkbox.checked) {
+          checkbox1.checked = false;
+          if (category === "faculty") {
+            row.classList.add("show");
+            row.classList.remove("hide");
+          } else {
+            row.classList.add("hide");
+            row.classList.remove("show");
+          }
+        }
+      });
+    });
+  </script>
+  <footer style="bottom: 0px"></footer>
+</body>
+
+</html>

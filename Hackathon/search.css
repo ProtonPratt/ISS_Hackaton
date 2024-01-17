@@ -1,0 +1,67 @@
+#search-form {
+	display: flex;
+	align-items: center;
+    width: fit-content;
+}
+
+body {
+    background-image: url("bg2.jpg");
+    /* background-size:co	ntain; */
+	color: orangered;
+}
+
+
+#search {
+	flex: 1;
+	margin-right: 10px;
+	font-size: 16px;
+	padding: 6px 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+button[type="submit"] {
+	font-size: 16px;
+	padding: 6px 10px;
+	border: none;
+	border-radius: 4px;
+	background-color: #4CAF50;
+	color: white;
+	cursor: pointer;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+input[type="number"] {
+	font-size: 16px;
+	padding: 6px 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+#results {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#results li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+#results li img {
+	width: 100px;
+	height: 100px;
+	margin-right: 20px;
+}
+
+#results li audio {
+	margin-left: auto;
+}

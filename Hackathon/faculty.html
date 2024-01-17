@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Researcher Registration Form</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            width: 300px;
+            font-size: 16px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <form> -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone-number">Phone Number:</label>
+    <input type="tel" id="phone-number" name="phone-number" required>
+
+    <label for="education">Education:</label>
+    <input type="text" id="education" name="education" required>
+
+    <label for="designation">Designation:</label>
+    <input type="text" id="designation" name="designation" required>
+
+    <label for="research-area">Research Area:</label>
+    <input type="text" id="research-area" name="research-area" required>
+
+    <label for="research-lab">Research Lab:</label>
+    <input type="text" id="research-lab" name="research-lab" required>
+
+    <label for="gender">Gender:</label>
+    <label><input type="radio" name="gender" value="Male" required>Male</label>
+    <label><input type="radio" name="gender" value="Female" required>Female</label>
+    <label><input type="radio" name="gender" value="Other" required>Other</label>
+
+    <button id="submit-faculty" type="submit">Submit</button>
+    <!-- </form> -->
+    <script src="./faculty_form.js"></script>
+</body>
+
+</html>

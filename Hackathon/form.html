@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Registration Form</title>
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		label {
+			display: block;
+			margin: 10px 0;
+			font-weight: bold;
+			font-size: 18px;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="tel"] {
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			margin-bottom: 20px;
+			width: 300px;
+			font-size: 16px;
+		}
+
+		input[type="radio"] {
+			margin-right: 10px;
+		}
+
+		button[type="submit"] {
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			font-size: 18px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+
+	<label for="full-name">Full Name:</label>
+	<input type="text" id="full-name" name="full-name" required>
+
+	<label for="roll-no">Roll No:</label>
+	<input type="text" id="roll-no" name="roll-no" required>
+
+	<label for="email">Email:</label>
+	<input type="email" id="email" name="email" required>
+
+	<label for="phone-number">Phone Number:</label>
+	<input type="tel" id="phone-number" name="phone-number" required>
+
+	<!-- <label for="programme">Programme:</label>
+	<input type="text" id="programme" name="programme" required> -->
+
+	<label for="degree">Degree:</label>
+	<input type="text" id="degree" name="degree" required>
+
+	<label for="branch">Branch:</label>
+	<input type="text" id="branch" name="branch" required>
+
+	<label for="gender">Gender:</label>
+	<label><input type="radio" name="gender" value="Male" required>Male</label>
+	<label><input type="radio" name="gender" value="Female" required>Female</label>
+	<label><input type="radio" name="gender" value="Other" required>Other</label>
+
+	<button id="submit-student" type="submit">Submit</button>
+
+	<script src="./student_form.js"></script>
+</body>
+
+</html>

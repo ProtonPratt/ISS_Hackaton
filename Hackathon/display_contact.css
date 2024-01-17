@@ -1,0 +1,124 @@
+.contain-contact {
+    display: block;
+}
+
+.results-box {
+    display: flex;
+    align-items: center;
+    width: 1650px;
+    height: 300px;
+    margin-top: 30px;
+    margin-left: 100px;
+    border: 2px solid rgb(17, 17, 17);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .results-box img {
+    margin: 30px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .contact-info {
+    padding: 20px;
+  }
+  
+  .contact-info h2 {
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    margin: 0;
+  }
+  /* **************************************
+  ************************************************
+  ********************************************************* */
+p {
+    line-height: 1.5;
+}
+  table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td,th {
+    padding: 0
+}
+
+tr.show {
+    display: table-row;
+  }
+  
+  tr.hide {
+    display: none;
+  }
+  
+
+  table {
+    width: 65%;
+    border: 1px solid #ccc;
+    margin: 1em auto
+}
+
+table td,table th {
+    padding: .5em
+}
+
+table td>p {
+    line-height: 1;
+    margin: 0;
+    padding: 0
+}
+
+table tr:nth-child(odd) {
+    background-color: #f5f5f5
+}
+
+table img {
+    width: 225px
+}
+
+
+  table#faculty .name {
+    color: #0066a7;
+    font-weight: 700
+}
+
+table#faculty .post {
+    color: #123456;
+    font-weight: 700
+}
+
+
+@media all and (max-width: 768px) {
+    .sidebar {
+        display:none
+    }
+
+    article img {
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+        float: none;
+        display: block
+    }
+
+    header h1 {
+        font-size: 3em
+    }
+
+    table {
+        overflow-x: auto;
+        display: block
+    }
+
+    article .stacktable.large-only {
+        display: none
+    }
+
+    article .stacktable.small-only {
+        display: table
+    }
+}

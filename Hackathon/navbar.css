@@ -1,0 +1,59 @@
+        .body {
+    margin: 0;
+    background-image: url(bg2.jpg);
+    background-size: cover;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  
+.navbar {
+    overflow: hidden;
+    background-color: #5237c9;
+    position: fixed;
+    top: 0;
+    height: 5vh;
+    width: 100%;
+    background-image: url('logo.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    z-index: 15;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: rgb(255, 255, 255)  ;
+    text-align: center;
+    padding: 15px 18px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+/* .navbar a:hover {
+    color: #1c87c9;
+} */
+
+    .container-slider {
+        /*overflow: visible;*/
+        display: block;
+        padding: 18px;
+        margin-top: 35px;
+        min-height: 89vh;
+        height: auto;
+    }
+
+footer {
+    /*position: relative;*/
+    margin-bottom: 0;
+    height: 4vh;
+    width: 100%;
+    background-color: rgba(0, 0,0, 0.5);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
